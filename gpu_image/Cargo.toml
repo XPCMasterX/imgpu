@@ -1,0 +1,19 @@
+[package]
+name = "gpu_image"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+vulkano = "0.26.0"
+vulkano-shaders = "0.26.0"
+png = "0.17.2"
+lazy_static = "1.4.0"
+image = "0.23"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+debug = true
+opt-level = 3
